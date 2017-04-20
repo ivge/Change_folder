@@ -9,9 +9,9 @@ namespace CompareFolder.ViewModel.Commands
     {
         private readonly ViewModel viewModel;
 
-        public SelectFolderCommand(ViewModel viewModel)
+        public SelectFolderCommand(ViewModel _viewModel)
         {
-            this.viewModel = viewModel;
+            this.viewModel = _viewModel;
         }
 
         public bool CanExecute(object parameter)
@@ -29,7 +29,7 @@ namespace CompareFolder.ViewModel.Commands
         {
             if (string.IsNullOrWhiteSpace(viewModel.FirstFolder)) viewModel.FirstFolder = SelectFolder();
             if (string.IsNullOrWhiteSpace(viewModel.SecondFolder)) viewModel.SecondFolder = SelectFolder();
-            var t = viewModel.GetFilesList();
+            viewModel.Files = viewModel.GetFilesList();
         }
         private string SelectFolder()
         {

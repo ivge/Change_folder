@@ -92,7 +92,7 @@ namespace CompareFolder.ViewModel
                 file.Size = fileInfo.Length;
                 file.ModifyDate = fileInfo.LastWriteTimeUtc;
                 //var t = String.Compare(file.Name, f.Name, false);
-                var _file = result.FirstOrDefault(f => String.Compare(file.Name, f.Name, false) != 0 );
+                var _file = result.FirstOrDefault(f => f.Name.Equals(file.Name, StringComparison.CurrentCulture));
 
                 if (_file == null)
                 {

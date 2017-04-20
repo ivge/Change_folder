@@ -31,7 +31,7 @@
             </Grid.ColumnDefinitions>
             <TextBox VerticalAlignment="Stretch" Text="{Binding Path=SecondFolder}"/>
         </Grid>
-        <DataGrid x:Name="dataGrid" Grid.Row="3" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <DataGrid x:Name="dataGrid" Grid.Row="3" Height="Auto" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding Path = Files}"/>
     </Grid>
 
 </Window>

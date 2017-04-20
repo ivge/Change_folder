@@ -16,7 +16,7 @@ namespace CompareFolder.Model
             ExistsInBothFoldersWithDifferentSizes,
         }
 
-        public Statuses Status; 
+        private Statuses status;
 
         private string name;
         public string Name
@@ -60,5 +60,17 @@ namespace CompareFolder.Model
             }
         }
 
+        public Statuses Status
+        {
+            get
+            {
+                return status;
+            }
+
+            set
+            {
+                status = value;
+            }
+        }
     }
 }
